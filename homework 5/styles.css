@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./assets/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    margin: 200px;
+    padding: 20px;
+}
+
+.table-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+td:hover {
+    background-color: rgba(244, 229, 255, 0.8);
+}
+
+tr:hover {
+    background-color: rgba(244, 229, 255, 0.6);
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    color: #8e44ad;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.star:hover {
+    transform: scale(1.5);
+    color: #d35400;
+}
+
+.star:hover ~ .star {
+    transform: scale(1);
+    color: #8e44ad;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #8e44ad;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: #8e44ad;
+    border-color: #8e44ad;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: white;
+}
+
+input[type="checkbox"] + label:hover {
+    background-color: rgba(142, 68, 173, 0.2);
+    border-color: #8e44ad;
+}
